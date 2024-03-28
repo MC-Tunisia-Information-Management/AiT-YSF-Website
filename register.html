@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Youthspeak registration" />
+    <meta name="keywords" content="Youth speak, YSF, creative, html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Maghreb 4 SDGS 2024</title>
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico" />
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Work+Sans:400,500,600,700,800,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css" />
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css" />
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css" />
+    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css" />
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css" />
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <link rel="stylesheet" href="css/register.css" type="text/css" />
+  </head>
+  <body>
+    <!-- Page Preloder -->
+    <div id="preloder">
+      <div class="loader"></div>
+    </div>
+
+    <header class="header-section">
+      <div class="col">
+        <div class="logo">
+          <a href="./index.html">
+            <img src="img/logo.png" alt="" />
+          </a>
+        </div>
+        <div class="nav-menu">
+          <nav class="mainmenu mobile-menu">
+            <ul>
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./about-us.html">About</a></li>
+              <li><a href="#">Events</a></li>
+              <!-- <li>
+                <a href="./speaker.html">Speakers</a>
+                <ul class="dropdown">
+                  <li><a href="#">Jayden</a></li>
+                  <li><a href="#">Sara</a></li>
+                  <li><a href="#">Emma</a></li>
+                  <li><a href="#">Harriet</a></li>
+                </ul>
+              </li>
+              <li><a href="./schedule.html">Schedule</a></li> -->
+            </ul>
+          </nav>
+          <!-- <a href="#" class="primary-btn top-btn"> Register</a> -->
+        </div>
+        <div id="mobile-menu-wrap"></div>
+      </div>
+    </header>
+    <section class="home-about-section contactPage">
+      <div class="section-title regtitle">
+        <h1 class="regtitle">Register</h1>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <form
+              id="registrationForm"
+              action="https://script.google.com/macros/s/AKfycbwOchI0VRsWylx2xPl80DXqVi3rmJAnI_c9sLFPiBJYZIRtm48emQK5RHw-NVyQxVeK/exec"
+              method="POST"
+            >
+              <div class="form-group">
+                <label for="fullname"><strong>Full Name:</strong></label>
+                <input
+                  type="text"
+                  id="fullname"
+                  name="Full Name"
+                  class="forminput"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="email"><strong>Email:</strong></label>
+                <input
+                  type="email"
+                  id="email"
+                  name="Email"
+                  class="forminput"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="phone"><strong>Phone Number:</strong></label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="Phone Number"
+                  class="forminput"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="region"><strong>Region:</strong></label>
+                <select id="region" name="Region" class="forminput" required>
+                  <option value="">Select Region</option>
+                  <option value="Bizerte">Bizerte</option>
+                  <option value="Nabeul">Nabeul</option>
+                  <option value="Monastir">Monastir</option>
+                  <option value="Gabes">Gabes</option>
+                  <option value="Sfax">Sfax</option>
+                  <option value="Sousse">Sousse</option>
+                  <option value="Campus Carthage">Campus Carthage</option>
+                  <option value="Campus Mannouba">Campus Mannouba</option>
+                  <option value="Campus Manar">Campus Manar</option>
+                  <option value="Campus Tunis">Campus Tunis</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="university"><strong>University:</strong></label>
+                <select
+                  id="university"
+                  name="University"
+                  class="forminput"
+                  required
+                >
+                  <option value="">Select University</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="field"><strong>Field of Studies:</strong> </label>
+                <input
+                  type="text"
+                  id="field"
+                  name="Field of Studies"
+                  class="forminput"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="year"><strong>Year of Studies:</strong> </label>
+                <input
+                  type="number"
+                  id="year"
+                  name="Year of Studies"
+                  class="forminput"
+                  required
+                  placeholder="Enter year"
+                  min="1900"
+                  max="2099"
+                />
+              </div>
+              <div class="form-group">
+                <label for="event"
+                  ><strong>Choose event to attend:</strong></label
+                >
+                <select id="event" name="Event" class="forminput" required>
+                  <option value="" disabled selected>Select Event</option>
+                  <option value="YouthSpeak Bizerte">YouthSpeak Bizerte</option>
+                  <option value="YouthSpeak Carthage">
+                    YouthSpeak Carthage
+                  </option>
+                  <option value="YouthSpeak Gabes">YouthSpeak Gabes</option>
+                  <option value="YouthSpeak Manar">YouthSpeak Manar</option>
+                  <option value="YouthSpeak Mannouba">
+                    YouthSpeak Mannouba
+                  </option>
+                  <option value="YouthSpeak Monastir">
+                    YouthSpeak Monastir
+                  </option>
+                  <option value="YouthSpeak Nabeul">YouthSpeak Nabeul</option>
+                  <option value="YouthSpeak Sfax">YouthSpeak Sfax</option>
+                  <option value="YouthSpeak Sousse">YouthSpeak Sousse</option>
+                  <option value="YouthSpeak Thyna">YouthSpeak Thyna</option>
+                  <option value="YouthSpeak Tunis">YouthSpeak Tunis</option>
+                </select>
+              </div>
+              <input type="submit" value="Submit" class="submit" />
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- JavaScript -->
+    <script>
+      window.addEventListener("load", function () {
+        const form = document.getElementById("registrationForm");
+        form.addEventListener("submit", function (event) {
+          event.preventDefault(); // Prevent form submission
+          const data = new FormData(form);
+          const action = event.target.action;
+          fetch(action, {
+            method: "POST",
+            body: data,
+          }).then(() => {
+            alert("Registration successful!");
+            window.location.href = "./index.html";
+          });
+        });
+      });
+      // Get references to the dropdowns
+      const regionDropdown = document.getElementById("region");
+      const universityDropdown = document.getElementById("university");
+
+      // Object containing universities based on regions
+      const universities = {
+        Bizerte: [
+          "FSB",
+          "ISETB",
+          "ISSAT Mateur",
+          "Enib",
+          "ISGB",
+          "IPEIB",
+          "ISPAB",
+          "ESA Mateur",
+        ],
+        Nabeul: [
+          "FSEGN",
+          "ISETN",
+          "ISBAN",
+          "ISLN",
+          "IPEIN",
+          "ISETK",
+          "UMLT",
+          "Leaders University",
+          "ITBS",
+          "IMSET",
+          "ISTIC",
+          "ISSTE",
+          "ENSTAB",
+        ],
+        Monastir: [
+          "FMDM",
+          "FMM",
+          "FPHM",
+          "ESSTSM",
+          "ISBM",
+          "ISIMM",
+          "ENIM",
+          "IPEIM",
+          "FSM",
+          "ISLAAT",
+          "ISEAH",
+          "ISET Mahdia",
+          "ISIMMa",
+          "FSEG",
+          "ISET Ksar Hlel",
+          "ESPRIT",
+          "Polytechnique",
+          "ISSATM",
+          "ISMM",
+          "ISAM",
+        ],
+        Gabes: [
+          "ISLG",
+          "ISET",
+          "ISG",
+          "ENIG",
+          "ISSAT",
+          "ESSAT",
+          "ISIMG",
+          "FSG",
+          "ISSIG",
+          "ISAMG",
+          "IMSET gabes",
+        ],
+        Sfax: [
+          "FLSH",
+          "ENIS",
+          "FSEG",
+          "ISB",
+          "IIT",
+          "IHE",
+          "IPSAS",
+          "ISMS",
+          "ISIMS",
+          "IHEC",
+          "FMSF",
+          "ESC",
+          "FSS",
+          "ISAAS",
+          "ISSEPS",
+          "ISBS",
+          "ESSTSS",
+          "ISSIS",
+          "ISGI",
+          "Enetcom",
+          "ISAMS",
+          "FDS",
+          "Musique route tunis",
+          "ESPIN",
+          "IPEIS",
+          "ISET",
+        ],
+        Sousse: [
+          "FMS",
+          "Faculté de Santé",
+          "Infirmerie ISSIS",
+          "ISIS",
+          "Agronomique",
+          "Institut de Musique",
+          "Faculté de Droit",
+          "EPI",
+          "ESTIM",
+          "IHE",
+        ],
+        "Campus Carthage": [
+          "IHEC Carthage",
+          "IHET",
+          "ENAU",
+          "ISLT",
+          "INSAT",
+          "SUPCOM",
+          "SMU ( MSB +  Medtech )",
+          "UTC",
+          "UIK",
+          "EBS",
+          "Polytech INTL",
+          "ESAD",
+          "Polytech centrale",
+          "Time université",
+          "UPES",
+          "FSJPST",
+          "INAT",
+          "ESTI",
+          "IPEST",
+          "ISTEUB",
+          "ISSTE",
+          "ISEPBG",
+          "ESIAT",
+          "ISCE",
+          "INTEST",
+          "INRGREF",
+          "INRAT",
+          "ESSAD",
+          "ENIcarthage",
+          "MiT Tunis",
+        ],
+        "Campus Mannouba": [
+          "ESC",
+          "ISCAE",
+          "ESEN",
+          "ENSI",
+          "ISAMM",
+          "FLAH",
+          "IPSI",
+          "ISD",
+          "Sup sat",
+          "UMM",
+          "ENMV",
+          "ESSTED",
+          "ISBST",
+          "ISSEP",
+          "UPSAT",
+          "Holberton school",
+        ],
+        "Campus Manar": [
+          "FSEGT",
+          "FST",
+          "FDSPT",
+          "ISI",
+          "ISET Rades",
+          "ISET'Com",
+          "IBLV",
+          "ISSBAT",
+          "ISSHT",
+          "ENIT",
+          "ESSTST",
+          "ULT",
+          "IMSET",
+          "Groupe Centrale",
+          "TekUp",
+          "Sesame",
+          "IHET",
+        ],
+        "Campus Tunis": [
+          "FSB",
+          "ISETB",
+          "ISSAT Mateur",
+          "Enib",
+          "ISG B",
+          "IPEIB",
+          "ISPAB",
+          "ESA Mateur",
+        ],
+        // Add more regions and universities as needed
+      };
+
+      // Function to populate university dropdown based on selected region
+      function populateUniversities() {
+        const selectedRegion = regionDropdown.value;
+        universityDropdown.innerHTML = ""; // Clear previous options
+
+        // Check if the selected region exists in the universities object
+        if (selectedRegion && universities[selectedRegion]) {
+          // Iterate over universities in the selected region and create options
+          universities[selectedRegion].forEach((university) => {
+            const option = document.createElement("option");
+            option.textContent = university;
+            option.value = university;
+            universityDropdown.appendChild(option);
+          });
+        } else {
+          // If the selected region has no universities, show a default message
+          const option = document.createElement("option");
+          option.textContent = "No universities available";
+          universityDropdown.appendChild(option);
+        }
+      }
+
+      // Populate universities dropdown when region selection changes
+      regionDropdown.addEventListener("change", populateUniversities);
+
+      // Initial population of universities dropdown
+      populateUniversities();
+    </script>
+    <!-- Js Plugins -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/jquery.countdown.min.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
