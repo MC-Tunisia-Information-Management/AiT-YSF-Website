@@ -34,7 +34,7 @@
     </div>
 
     <header class="header-section">
-      <div class="col">
+      <div class="container">
         <div class="logo">
           <a href="./index.html">
             <img src="img/logo.png" alt="" />
@@ -43,26 +43,88 @@
         <div class="nav-menu">
           <nav class="mainmenu mobile-menu">
             <ul>
-              <li><a href="./index.html">Home</a></li>
-              <li><a href="./about-us.html">About</a></li>
-              <li><a href="#">Events</a></li>
-              <!-- <li>
-                <a href="./speaker.html">Speakers</a>
+              <li class="active"><a href="./index.html">Home</a></li>
+              <li>
+                <a href="./events.html">Events</a>
                 <ul class="dropdown">
-                  <li><a href="#">Jayden</a></li>
-                  <li><a href="#">Sara</a></li>
-                  <li><a href="#">Emma</a></li>
-                  <li><a href="#">Harriet</a></li>
+                  <li>
+                    <a
+                      class="event-dropdown"
+                      href="./events/Bizerte-details.html"
+                      >YouthSpeak Bizerte</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="event-dropdown"
+                      href="./events/Carthage-details.html"
+                      >YouthSpeak Carthage</a
+                    >
+                  </li>
+                  <li>
+                    <a class="event-dropdown" href="./events/Gabes-details.html"
+                      >YouthSpeak Gabes</a
+                    >
+                  </li>
+                  <li>
+                    <a class="event-dropdown" href="./events/Manar-details.html"
+                      >YouthSpeak Manar</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="event-dropdown"
+                      href="./events/Mannouba-details.html"
+                      >YouthSpeak Mannouba</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="event-dropdown"
+                      href="./events/Monastir-details.html"
+                      >YouthSpeak Monastir and Mahdia</a
+                    >
+                  </li>
+                  <li>
+                    <a class="event-dropdown" href="./events/Nabel-details.html"
+                      >YouthSpeak Nabeul</a
+                    >
+                  </li>
+                  <li>
+                    <a class="event-dropdown" href="./events/Sfax-details.html"
+                      >YouthSpeak Sfax</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="event-dropdown"
+                      href="./events/Sousse-details.html"
+                      >YouthSpeak Sousse</a
+                    >
+                  </li>
+                  <li>
+                    <a class="event-dropdown" href="./events/Thyna-details.html"
+                      >YouthSpeak Sfax - Thyna</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="event-dropdown"
+                      href="./events/Tunis-details .html"
+                      >YouthSpeak Tunis - Bardo</a
+                    >
+                  </li>
                 </ul>
               </li>
-              <li><a href="./schedule.html">Schedule</a></li> -->
+              <!-- <li><a href="./schedule.html">Schedule</a></li> -->
             </ul>
           </nav>
-          <!-- <a href="#" class="primary-btn top-btn"> Register</a> -->
+          <a href="./register.html" class="primary-btn top-btn"> Register</a>
         </div>
         <div id="mobile-menu-wrap"></div>
       </div>
     </header>
+
     <section class="home-about-section contactPage">
       <div class="section-title regtitle">
         <h1 class="regtitle">Register</h1>
@@ -72,7 +134,7 @@
           <div class="col-lg-12">
             <form
               id="registrationForm"
-              action="https://script.google.com/macros/s/AKfycbwOchI0VRsWylx2xPl80DXqVi3rmJAnI_c9sLFPiBJYZIRtm48emQK5RHw-NVyQxVeK/exec"
+              action="https://script.google.com/macros/s/AKfycbz6Oz08xh2Eo4m1l2TPiUJsWTEF6XRlgfS-AZdYJ_8O280GPAt4Kh61BYOJLq9rklnE/exec"
               method="POST"
             >
               <div class="form-group">
@@ -144,16 +206,26 @@
               </div>
               <div class="form-group">
                 <label for="year"><strong>Year of Studies:</strong> </label>
-                <input
-                  type="number"
+                <select
                   id="year"
                   name="Year of Studies"
                   class="forminput"
                   required
-                  placeholder="Enter year"
-                  min="1900"
-                  max="2099"
-                />
+                >
+                  <option value="" disabled selected>
+                    Select year of studies
+                  </option>
+                  <option value="L1">L1</option>
+                  <option value="L2">L2</option>
+                  <option value="L3">L3</option>
+                  <option value="M1">M1</option>
+                  <option value="M2">M2</option>
+                  <option value="ENG1">ENG1</option>
+                  <option value="ENG2">ENG2</option>
+                  <option value="ENG3">ENG3</option>
+                  <option value="D1">D1</option>
+                  <option value="D2">D2</option>
+                </select>
               </div>
               <div class="form-group">
                 <label for="event"
@@ -170,16 +242,56 @@
                   <option value="YouthSpeak Mannouba">
                     YouthSpeak Mannouba
                   </option>
-                  <option value="YouthSpeak Monastir">
-                    YouthSpeak Monastir
+                  <option value="YouthSpeak Monastir and Mahdia">
+                    YouthSpeak Monastir and Mahdia
                   </option>
                   <option value="YouthSpeak Nabeul">YouthSpeak Nabeul</option>
                   <option value="YouthSpeak Sfax">YouthSpeak Sfax</option>
                   <option value="YouthSpeak Sousse">YouthSpeak Sousse</option>
-                  <option value="YouthSpeak Thyna">YouthSpeak Thyna</option>
-                  <option value="YouthSpeak Tunis">YouthSpeak Tunis</option>
+                  <option value="YouthSpeak Sfax - Thyna">
+                    YouthSpeak Sfax - Thyna
+                  </option>
+                  <option value="YouthSpeak Tunis - Bardo">
+                    YouthSpeak Tunis - Bardo
+                  </option>
                 </select>
               </div>
+              <div class="form-group">
+                <label for="regtype"
+                  ><strong
+                    >Will you be a Competitor or a visitor?</strong
+                  ></label
+                >
+                <select
+                  id="regtype"
+                  name="Type of Registration"
+                  class="forminput"
+                  required
+                  onchange="toggleTextInput()"
+                >
+                  <option value="" disabled selected>Select type</option>
+                  <option value="Visitor">Visitor</option>
+                  <option value="Competitor">Competitor</option>
+                </select>
+              </div>
+              <div
+                class="form-group"
+                id="competitorInput"
+                style="display: none"
+              >
+                <label for="Team Name"><strong>Team Name:</strong></label>
+                <input
+                  type="text"
+                  class="forminput"
+                  id="Team Name"
+                  name="Team Name"
+                  value="Input your team name"
+                />
+              </div>
+              <label>
+                <input type="checkbox" id="agree" required />
+                Do you agree to share your data with us and our partners?
+              </label>
               <input type="submit" value="Submit" class="submit" />
             </form>
           </div>
@@ -188,11 +300,32 @@
     </section>
     <!-- JavaScript -->
     <script>
+      function toggleTextInput() {
+        var selectElement = document.getElementById("regtype");
+        var competitorInput = document.getElementById("competitorInput");
+        var selectedOption =
+          selectElement.options[selectElement.selectedIndex].value;
+        console.log(selectedOption === "Competitor");
+        console.log(selectedOption);
+        console.log(typeof selectedOption);
+        if (selectedOption == "Competitor") {
+          competitorInput.style.display = "block";
+          competitorInput.getElementsByTagName("input").required = true;
+        } else {
+          competitorInput.getElementsByTagName("input").required = false;
+          competitorInput.style.display = "none";
+        }
+      }
       window.addEventListener("load", function () {
         const form = document.getElementById("registrationForm");
+        const formElements = form.elements;
+
         form.addEventListener("submit", function (event) {
           event.preventDefault(); // Prevent form submission
           const data = new FormData(form);
+          for (let i = 0; i < formElements.length; i++) {
+            formElements[i].disabled = true;
+          }
           const action = event.target.action;
           fetch(action, {
             method: "POST",

@@ -89,6 +89,16 @@ img {
   max-width: 100%;
 }
 
+.owl-carousel .owl-item {
+  width: 140px !important; /* Adjust width as needed */
+  height: auto !important; /* Adjust height as needed */
+}
+
+.owl-carousel .owl-item img {
+  max-width: 120% !important; /* Ensure images fill the container */
+  height: auto !important; /* Maintain aspect ratio */
+}
+
 input:focus,
 select:focus,
 button:focus,
@@ -321,7 +331,7 @@ ol {
 
 .nav-menu .mainmenu ul li .dropdown {
   position: absolute;
-  width: 180px;
+  width: 220px;
   background: #ffffff;
   z-index: 99;
   left: 0;
@@ -336,25 +346,21 @@ ol {
 }
 
 .nav-menu .mainmenu ul li .dropdown li {
-  display: block;
-  margin-right: 0;
+  text-align: center; /* Center align text */
 }
 
 .nav-menu .mainmenu ul li .dropdown li a {
-  padding: 8px 10px;
   display: block;
-  -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  transition: all 0.3s;
-  text-transform: capitalize;
+  padding: 8px 10px; /* Adjust padding */
+  text-decoration: none; /* Remove underline */
+  color: #000000; /* Set text color */
+  -webkit-transition: none; /* Remove transition */
+  -o-transition: none;
+  transition: none;
 }
 
 .nav-menu .mainmenu ul li .dropdown li a:hover {
   color: #7552cc;
-}
-
-.nav-menu .mainmenu ul li .dropdown li a:after {
-  display: none;
 }
 
 .nav-menu .mainmenu ul li.active a:after {
@@ -379,6 +385,16 @@ ol {
   padding: 42px 0;
   position: relative;
   display: inline-block;
+}
+
+.nav-menu .mainmenu ul.dropdown li a.event-dropdown:after {
+  position: absolute;
+  left: 0;
+  bottom: 0; /* Position the underline below the text */
+  height: 2px;
+  width: 100%; /* Ensure the underline spans the full width */
+  background: #7552cc;
+  content: ""; /* Ensure content property is set */
 }
 
 .nav-menu .mainmenu ul li a:after {
@@ -1156,13 +1172,9 @@ ol {
 
 .footer-section {
   background: #171822;
+  margin-top: 100px;
   padding-top: 50px;
   padding-bottom: 60px;
-}
-
-.partner-logo {
-  padding-bottom: 50px;
-  border-bottom: 1px solid #2f3039;
 }
 
 .partner-logo .pl-table {
@@ -1170,10 +1182,19 @@ ol {
   display: table;
 }
 
+.partners-section {
+  margin-top: 152px;
+  margin-bottom: -150px;
+}
+
 .partner-logo .pl-table .pl-tablecell {
   display: table-cell;
   vertical-align: middle;
-  height: 41px;
+  height: 150px;
+}
+.partner-logo .pl-table .pl-tablecell img {
+  width: 2000px; /* Adjust width as needed */
+  height: auto; /* Maintain aspect ratio */
 }
 
 .footer-text {
@@ -1888,7 +1909,7 @@ ol {
 -----------------------*/
 
 .blog-details-section {
-  padding-top: 70px;
+  padding-top: 90px;
 }
 
 .bd-text .bd-title {

@@ -1,0 +1,20 @@
+.events-page {
+  margin-top: 162px;
+}
+
+.events-title {
+  font-weight: bold;
+}
+
+.event-item {
+  border: 1px solid #ccc; /* Add your existing border */
+  border-radius: 9px;
+  padding: 2% 5%;
+  margin: 20px 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add your existing shadow */
+  transition: box-shadow 0.3s ease; /* Transition for smooth effect */
+}
+
+.event-item:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* New shadow on hover */
+}
