@@ -96,7 +96,7 @@ img {
 
 .owl-carousel .owl-item img {
   max-width: 120% !important; /* Ensure images fill the container */
-  height: auto !important; /* Maintain aspect ratio */
+  height:max-content !important; /* Maintain aspect ratio */
 }
 
 input:focus,
@@ -375,6 +375,9 @@ ol {
   opacity: 1;
   visibility: visible;
   top: 100px;
+  overflow: hidden;
+  overflow-y: auto;
+  max-height: calc(100vh - 150px);
 }
 
 .nav-menu .mainmenu ul li a {
@@ -1184,7 +1187,7 @@ ol {
 
 .partners-section {
   margin-top: 152px;
-  margin-bottom: -150px;
+  margin-bottom: 1%;
 }
 
 .partner-logo .pl-table .pl-tablecell {
@@ -1193,7 +1196,7 @@ ol {
   height: 150px;
 }
 .partner-logo .pl-table .pl-tablecell img {
-  width: 2000px; /* Adjust width as needed */
+  width: 100px; /* Adjust width as needed */
   height: auto; /* Maintain aspect ratio */
 }
 
@@ -1910,6 +1913,7 @@ ol {
 
 .blog-details-section {
   padding-top: 90px;
+  margin-bottom: 5%;
 }
 
 .bd-text .bd-title {

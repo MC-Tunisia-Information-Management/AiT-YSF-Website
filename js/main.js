@@ -39,7 +39,7 @@
 		Partner Slider
     ----------------------- */
     $(".partner-logo").owlCarousel({
-        items: 6,
+        items: 1,
         dots: false,
         autoplay: true,
         loop: true,
@@ -56,10 +56,10 @@
                 items: 4,
             },
             992: {
-                items: 5,
+                items: 4,
             },
             1200: {
-                items: 6
+                items: 4
             }
         }
     });
