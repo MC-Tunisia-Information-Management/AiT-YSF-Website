@@ -2,6 +2,12 @@
   margin-top: 162px;
 }
 
+.disabled {
+  background-color: #ccc !important; /* Gray background */
+  color: #666 !important; /* Gray text color */
+  cursor: not-allowed !important; /* Change cursor to indicate it's disabled */
+}
+
 .regtitle {
   font-size: 80px;
   font-weight: bold;

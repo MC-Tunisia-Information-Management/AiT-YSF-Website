@@ -173,7 +173,7 @@
                   <option value="">Select Region</option>
                   <option value="Bizerte">Bizerte</option>
                   <option value="Nabeul">Nabeul</option>
-                  <option value="Monastir">Monastir</option>
+                  <option value="Monastir & Mahdia">Monastir</option>
                   <option value="Gabes">Gabes</option>
                   <option value="Sfax">Sfax</option>
                   <option value="Sousse">Sousse</option>
@@ -231,6 +231,7 @@
                 <label for="event"
                   ><strong>Choose event to attend:</strong></label
                 >
+                <p style="color: red" id="message"></p>
                 <select id="event" name="Event" class="forminput" required>
                   <option value="" disabled selected>Select Event</option>
                   <option value="YouthSpeak Bizerte">YouthSpeak Bizerte</option>
@@ -300,6 +301,31 @@
     </section>
     <!-- JavaScript -->
     <script>
+      const eventSelect = document.getElementById("event");
+      const submitButton = document.querySelector(".submit");
+      const messageElement = document.getElementById("message");
+
+      // Add event listener to the select element
+      eventSelect.addEventListener("change", function () {
+        // Check if the selected option is "YouthSpeak Nabeul"
+        if (eventSelect.value === "YouthSpeak Nabeul") {
+          // Disable the submit button
+          submitButton.disabled = true;
+          // Apply style to the submit button
+          submitButton.classList.add("disabled");
+          // Set the message text
+          messageElement.textContent =
+            "Sorry, the registration for this event is closed.";
+        } else {
+          // Enable the submit button if another option is selected
+          submitButton.disabled = false;
+          // Remove the style from the submit button
+          submitButton.classList.remove("disabled");
+          // Clear the message text
+          messageElement.textContent = "";
+        }
+      });
+
       function toggleTextInput() {
         var selectElement = document.getElementById("regtype");
         var competitorInput = document.getElementById("competitorInput");
@@ -367,7 +393,7 @@
           "ISSTE",
           "ENSTAB",
         ],
-        Monastir: [
+        "Monastir & Mahdia": [
           "FMDM",
           "FMM",
           "FPHM",
@@ -390,45 +416,31 @@
           "ISAM",
         ],
         Gabes: [
-          "ISLG",
-          "ISET",
           "ISG",
-          "ENIG",
+          "ISLG",
+          "Essat prive",
+          "ISET",
+          "IMSET",
+          "ISMG",
+          "FS",
           "ISSAT",
-          "ESSAT",
-          "ISIMG",
-          "FSG",
-          "ISSIG",
-          "ISAMG",
-          "IMSET gabes",
+          "ENIG",
+          "Beaux arts",
+          "Fac droit",
+          "المنظومات",
+          "جامعة معالجة المياه",
+          "Iset jerba",
         ],
         Sfax: [
-          "FLSH",
+          "ISB/IIT",
+          "IHEC",
+          "ENET'COM",
+          "FLSHS",
           "ENIS",
           "FSEG",
-          "ISB",
-          "IIT",
-          "IHE",
-          "IPSAS",
-          "ISMS",
           "ISIMS",
-          "IHEC",
-          "FMSF",
-          "ESC",
-          "FSS",
-          "ISAAS",
-          "ISSEPS",
-          "ISBS",
-          "ESSTSS",
-          "ISSIS",
           "ISGI",
-          "Enetcom",
-          "ISAMS",
-          "FDS",
-          "Musique route tunis",
-          "ESPIN",
-          "IPEIS",
-          "ISET",
+          "UPSAT",
         ],
         Sousse: [
           "FMS",
@@ -449,15 +461,12 @@
           "ISLT",
           "INSAT",
           "SUPCOM",
-          "SMU ( MSB +  Medtech )",
           "UTC",
           "UIK",
           "EBS",
           "Polytech INTL",
           "ESAD",
           "Polytech centrale",
-          "Time université",
-          "UPES",
           "FSJPST",
           "INAT",
           "ESTI",
@@ -470,9 +479,11 @@
           "INTEST",
           "INRGREF",
           "INRAT",
-          "ESSAD",
-          "ENIcarthage",
           "MiT Tunis",
+          "LBS",
+          "must university",
+          "EIGHT",
+          "ENAU Ecole",
         ],
         "Campus Mannouba": [
           "ESC",
@@ -492,6 +503,11 @@
           "ISSEP",
           "UPSAT",
           "Holberton school",
+          "ISHTC",
+          "ISES",
+          "FLAHM",
+          "ISDT",
+          "MSE",
         ],
         "Campus Manar": [
           "FSEGT",
