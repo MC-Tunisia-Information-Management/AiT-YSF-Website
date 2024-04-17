@@ -173,7 +173,7 @@
                   <option value="">Select Region</option>
                   <option value="Bizerte">Bizerte</option>
                   <option value="Nabeul">Nabeul</option>
-                  <option value="Monastir & Mahdia">Monastir</option>
+                  <option value="Monastir & Mahdia">Monastir & Mahdia</option>
                   <option value="Gabes">Gabes</option>
                   <option value="Sfax">Sfax</option>
                   <option value="Sousse">Sousse</option>
@@ -193,6 +193,17 @@
                 >
                   <option value="">Select University</option>
                 </select>
+                <label for="university" id="otherUniversityLabel" class=""
+                  ><strong>Other:</strong></label
+                >
+                <input
+                  type="text"
+                  id="otherUniversityInput"
+                  name="OtherUniversity"
+                  name="University"
+                  class="forminput"
+                  placeholder="Enter other university"
+                />
               </div>
               <div class="form-group">
                 <label for="field"><strong>Field of Studies:</strong> </label>
@@ -331,9 +342,6 @@
         var competitorInput = document.getElementById("competitorInput");
         var selectedOption =
           selectElement.options[selectElement.selectedIndex].value;
-        console.log(selectedOption === "Competitor");
-        console.log(selectedOption);
-        console.log(typeof selectedOption);
         if (selectedOption == "Competitor") {
           competitorInput.style.display = "block";
           competitorInput.getElementsByTagName("input").required = true;
@@ -348,9 +356,18 @@
 
         form.addEventListener("submit", function (event) {
           event.preventDefault(); // Prevent form submission
+
           const data = new FormData(form);
-          for (let i = 0; i < formElements.length; i++) {
-            formElements[i].disabled = true;
+          for (const chunk of data) {
+            if (chunk[0] === "OtherUniversity") {
+              if (chunk[1] !== "") {
+                data.set("University", chunk[1]);
+                data.delete("OtherUniversity");
+              } else data.delete("OtherUniversity");
+            }
+          }
+          for (const element of formElements) {
+            element.disabled = true;
           }
           const action = event.target.action;
           fetch(action, {
@@ -365,7 +382,16 @@
       // Get references to the dropdowns
       const regionDropdown = document.getElementById("region");
       const universityDropdown = document.getElementById("university");
-
+      const otherUniversityLabel = document.getElementById(
+        "otherUniversityLabel"
+      );
+      const otherUniversityInput = document.getElementById(
+        "otherUniversityInput"
+      );
+      window.onload = function () {
+        otherUniversityLabel.classList.add("hidden");
+        otherUniversityInput.classList.add("hidden");
+      };
       // Object containing universities based on regions
       const universities = {
         Bizerte: [
@@ -377,6 +403,7 @@
           "IPEIB",
           "ISPAB",
           "ESA Mateur",
+          "Other",
         ],
         Nabeul: [
           "FSEGN",
@@ -392,6 +419,7 @@
           "ISTIC",
           "ISSTE",
           "ENSTAB",
+          "Other",
         ],
         "Monastir & Mahdia": [
           "FMDM",
@@ -414,6 +442,7 @@
           "ISSATM",
           "ISMM",
           "ISAM",
+          "Other",
         ],
         Gabes: [
           "ISG",
@@ -430,6 +459,7 @@
           "المنظومات",
           "جامعة معالجة المياه",
           "Iset jerba",
+          "Other",
         ],
         Sfax: [
           "ISB/IIT",
@@ -441,6 +471,7 @@
           "ISIMS",
           "ISGI",
           "UPSAT",
+          "Other",
         ],
         Sousse: [
           "FMS",
@@ -453,6 +484,7 @@
           "EPI",
           "ESTIM",
           "IHE",
+          "Other",
         ],
         "Campus Carthage": [
           "IHEC Carthage",
@@ -484,6 +516,7 @@
           "must university",
           "EIGHT",
           "ENAU Ecole",
+          "Other",
         ],
         "Campus Mannouba": [
           "ESC",
@@ -508,6 +541,7 @@
           "FLAHM",
           "ISDT",
           "MSE",
+          "Other",
         ],
         "Campus Manar": [
           "FSEGT",
@@ -527,6 +561,7 @@
           "TekUp",
           "Sesame",
           "IHET",
+          "Other",
         ],
         "Campus Tunis": [
           "ISG Tunis",
@@ -550,6 +585,7 @@
           "Sciences Po",
           "Digital College",
           `Paris d’auphine`,
+          "Other",
         ],
         // Add more regions and universities as needed
       };
@@ -568,16 +604,22 @@
             option.value = university;
             universityDropdown.appendChild(option);
           });
+        }
+      } // Populate universities dropdown when region selection changes
+      regionDropdown.addEventListener("change", populateUniversities);
+      function OtherUnivresityInput() {
+        const selectedUniversity = universityDropdown.value;
+        if (selectedUniversity === "Other") {
+          // Show the label and input field for entering another university
+          otherUniversityLabel.classList.remove("hidden");
+          otherUniversityInput.classList.remove("hidden");
         } else {
-          // If the selected region has no universities, show a default message
-          const option = document.createElement("option");
-          option.textContent = "No universities available";
-          universityDropdown.appendChild(option);
+          // Hide the label and input field if another option is selected
+          otherUniversityLabel.classList.add("hidden");
+          otherUniversityInput.classList.add("hidden");
         }
       }
-
-      // Populate universities dropdown when region selection changes
-      regionDropdown.addEventListener("change", populateUniversities);
+      universityDropdown.addEventListener("change", OtherUnivresityInput);
 
       // Initial population of universities dropdown
       populateUniversities();
