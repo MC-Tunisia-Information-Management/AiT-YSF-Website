@@ -6,7 +6,6 @@
   display: none;
 }
 
-
 .disabled {
   background-color: #ccc !important; /* Gray background */
   color: #666 !important; /* Gray text color */
